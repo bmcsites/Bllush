@@ -1,0 +1,18 @@
+<div class="container" #sWidContainer>
+  <div class="slider">
+    <div class="item-container" [ngClass]="{'mobile': isMobile}" *ngFor="let item of shownData">
+      <div class="media">
+        <div class="img-box">
+          <img src="{{ item.cover_thumb_url }}" data-src="{{ item.cover_thumb_url }}">
+          <button class="read-more" (click)="navigateTo(item.link)">Read More</button>
+        </div>
+        <div class="text-zone">
+          <h4>{{item.story_title}}</h4>
+          <p>{{item.story_sub_title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="next-btn" (click)="changeData('next')">&#62;</button>
+  <button class="pre-btn" (click)="changeData('pre')">&#60;</button>
+</div>
