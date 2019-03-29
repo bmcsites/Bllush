@@ -4,6 +4,4 @@ export interface StoryData {
   link: string;
   story_sub_title: string;
   story_title: string;
-  round_number: number;
-  stadium: string;
 }
