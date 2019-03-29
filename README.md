@@ -10,20 +10,26 @@ Pull the project from github [Bllush Project](https://github.com/bmcsites/Bllush
 
 Run `npm i` in the console under the library you just pulled from git. 
 
-Run `npm run appbuild` and wait for the console to finish and print : `file generated`.
+Run `npm run appbuild` and wait for the console to finish and print : `widget is ready`.
+
+Navigate to `/dist/suggested-widget` folder and run index.html to see the demo
 
 ## Use Widget
 
-Navigate to `/dist/suggested-widget` folder.
+1. Navigate to `/dist/suggested-widget` folder.
 
-Copy `suggestedwidget.js` and `styles.css` to your website folder.
+2. Copy `suggestedwidget.js`, `injectwidget.js` and `styles.css` to your website folder or remote server.
 
-Add the css link to the `<head>` tag : 
-`<link href="./styles.css" media="screen" rel="stylesheet" type="text/css">`.
+3. Add the `injectwidget.js` to the scripts at the end of the `<body>` tag:<br/>
+`<script type="text/javascript" src="./injectwidget.js"></script>`.
 
-Add into the `<body>` the widget tag `<suggested-widget></suggested-widget>`.
+4. Edit the `injectwidget.js` file to match the path to the `styles.css` by editing the <b>link.href</b> variable:<br/>
+`link.href = './styles.css';`
 
-Add the `suggestedwidget.js` to the scripts at the end of the `<body>` tag :
-`<script type="text/javascript" src="./suggestedwidget.js"></script>`.
-		
+5. Edit the `injectwidget.js` file to match the path to the `suggestedwidget.js` by editing the <b>element.src</b> variable:<br/>
+`element.src = "./suggestedwidget.js";`
+
+6. You can edit the HTML tag as well in the `injectwidget.js` by editing the <b>htmlTag</b> variable:<br/>
+`var htmlTag = document.getElementById('suggested-stories-container');`
+
 Enjoy The Widget. (for any questions feel free to contact me).
