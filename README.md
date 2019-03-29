@@ -10,7 +10,8 @@ Pull the project from github [Bllush Project](https://github.com/bmcsites/Bllush
 
 Run `npm i` in the console under the library you just pulled from git. 
 
-Run `npm run appbuild` and wait for the console to finish and print : `widget is ready`.
+Run `npm run appbuild` and wait for the console to finish and print : `widget is ready`.<br/>
+(mergelib.js as node js code that arrange the dist after creation .)
 
 Navigate to `/dist/suggested-widget` folder and run index.html to see the demo
 

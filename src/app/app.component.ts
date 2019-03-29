@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { AppService } from './app.service';
 import { StoryData } from '../shared/modules/stories.inteface';
 
@@ -7,7 +7,7 @@ import { StoryData } from '../shared/modules/stories.inteface';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements AfterViewInit {
   data: StoryData[];
   shownData: StoryData[];
   currentIndex: number;
@@ -29,10 +29,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.isMobile = false;
     this.currentIndex = -1;
     this.lastClickDirection = 'next';
-  }
-
-  ngOnInit() {
-
   }
 
   ngAfterViewInit() {
