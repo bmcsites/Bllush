@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import { AppService } from './app.service';
+import { StoryData } from '../shared/modules/stories.inteface';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,8 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  data: any[];
-  shownData: any[];
+  data: StoryData[];
+  shownData: StoryData[];
   currentIndex: number;
   isMobile: boolean;
   lastClickDirection: string;
@@ -44,10 +45,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   // load data
   loadData() {
     // load data from service that handel's http calls.
-    this.appService.getSuggestions().subscribe((data: any) => {
+    this.appService.getSuggestions().subscribe((data: StoryData[]) => {
         if (data) {
           // load specific data.
-          this.data = data.data.stories;
+          this.data = data;
           // load items to the shownData;
           this.changeData('next');
         }
