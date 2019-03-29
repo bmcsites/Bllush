@@ -32,4 +32,7 @@ Navigate to `/dist/suggested-widget` folder and run index.html to see the demo
 6. You can edit the HTML tag as well in the `injectwidget.js` by editing the <b>htmlTag</b> variable:<br/>
 `var htmlTag = document.getElementById('suggested-stories-container');`
 
+7. Add the <b>HTML Tag</b> wherever you want to widget to display:<br/>
+ `<div id="yourHtmlTag"></div>`
+
 Enjoy The Widget. (for any questions feel free to contact me).
